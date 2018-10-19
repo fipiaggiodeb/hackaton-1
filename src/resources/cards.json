@@ -100,27 +100,31 @@
         "idGroup" : "07",
         "name" : "Carta 13",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-peru"
     },
     {
         "id" : "14",
         "idGroup" : "07",
         "name" : "Carta 14",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-peru"
     },
     {
         "id" : "15",
         "idGroup" : "08",
         "name" : "Carta 15",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-orange"
     },
     {
         "id" : "16",
         "idGroup" : "08",
         "name" : "Carta 16",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-orange"
     }
 ]
