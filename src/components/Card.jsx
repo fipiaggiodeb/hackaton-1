@@ -14,13 +14,22 @@ export default class Card extends Component {
     render(){
         return(
             <div 
-            onClick={ this.handleClick }
-            className={
-                "card " + 
+            onClick={ this.handleClick } 
+            className={ 
+                "grid-item " + 
                 (this.props.toggle && !this.props.freeze ? 'show ' : 'hidden ') + 
-                (this.props.freeze ? 'freeze' : '')
-            }>
-                <p>Hola</p>
+                (this.props.freeze ? 'freeze' : '')}
+            >
+                <div className="flip-card">
+                    <div className="flip-card-inner">
+                        <div className="flip-card-front">
+                            front
+                        </div>
+                        <div className="flip-card-back">
+                            { this.props.idGroup }
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

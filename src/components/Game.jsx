@@ -23,7 +23,7 @@ export default class Game extends Component {
 
     /**
      * Cuando clickeas una card
-     * @param {number} id 
+     * @param {number} id
      */
     click(id, toggle, idGroup, freeze){
         // Evito clickear sobre las que ya estan dadas vueltas
@@ -93,18 +93,32 @@ export default class Game extends Component {
     componentDidMount(){
         this.setState({ cards: Cards })
     }
-    
+
     render(){
         return(
-            <div>
-                <Link to="/">Volver</Link>
-                <p onClick={this.finish}> Terminar </p>
-                <h2 onClick={this.onCardClick}>Jueguito</h2>
-                <h2> {this.state.step} </h2>
-                <Timer start={Date.now()} />
-                <hr />
-                {
-                    Cards.map( card => (
+            <div className="game-container">
+                <div className="header">
+                    <div className="title-box">
+                        <h1>Memoria 2018</h1>
+                        <Link to="/">Volver</Link>
+                        <p onClick={this.finish}> Terminar </p>
+                    </div>
+                    <div className="user-info">
+                        <div className="user-name">
+                            <span>Record:<br/> 20 seg</span>
+                        </div>
+                        <div className="user-max-score">
+                        </div>
+                    </div>
+                    <div className="user-current-time">
+                        <span className="text-3d">
+                            <Timer start={Date.now()} />
+                        </span>
+                    </div>
+                </div>
+                <div className="grid-container">
+                    {
+                        Cards.map( card => (
                             <Card 
                                 key={card.id} 
                                 id={card.id}
@@ -112,9 +126,10 @@ export default class Game extends Component {
                                 freeze={card.freeze} 
                                 idGroup={card.idGroup} 
                                 onCardClick={this.click} /> 
+                            )
                         )
-                    )
-                }
+                    }
+                </div>
             </div>
         )
     }

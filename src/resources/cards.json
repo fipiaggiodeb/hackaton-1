@@ -24,7 +24,91 @@
         "id" : "04",
         "idGroup" : "02",
         "name" : "Carta 4",
-        "freeze" : false,
-        "toggle": false
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "05",
+        "idGroup" : "03",
+        "name" : "Carta 5",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "06",
+        "idGroup" : "03",
+        "name" : "Carta 6",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "07",
+        "idGroup" : "04",
+        "name" : "Carta 7",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "08",
+        "idGroup" : "04",
+        "name" : "Carta 8",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "09",
+        "idGroup" : "05",
+        "name" : "Carta 9",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "10",
+        "idGroup" : "05",
+        "name" : "Carta 10",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "11",
+        "idGroup" : "06",
+        "name" : "Carta 11",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "12",
+        "idGroup" : "06",
+        "name" : "Carta 12",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "13",
+        "idGroup" : "07",
+        "name" : "Carta 13",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "14",
+        "idGroup" : "07",
+        "name" : "Carta 14",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "15",
+        "idGroup" : "08",
+        "name" : "Carta 15",
+        "toggle" : false,
+        "freeze" : false
+    },
+    {
+        "id" : "16",
+        "idGroup" : "08",
+        "name" : "Carta 16",
+        "toggle" : false,
+        "freeze" : false
     }
 ]
