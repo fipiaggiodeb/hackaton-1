@@ -11,9 +11,6 @@ export default class Game extends Component {
 	            	<div className="container-lamparita">
 
 
-
-
-
 	            	<svg id="lamparita" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 302.64 453.88"><defs></defs><title>hackthon</title><text x="-808.68" y="-313.06"></text>
 
 		            	<path className="cls-1" d="M984.92,719.8H940.28a37.2,37.2,0,0,1-37.2-37.2v-7.44h119v7.44a37.2,37.2,0,0,1-37.2,37.2" transform="translate(-808.68 -313.06)"/>
@@ -86,6 +83,7 @@ export default class Game extends Component {
 	                        display: flex;
 	                        justify-content: center;
 	                        min-height: 34rem;
+	                        margin-top: 3rem;
 	                     
 	                    }
 
@@ -187,7 +185,6 @@ export default class Game extends Component {
 
 	                    /* / Animación de la copa */
 
-	
 	                    `}</style>
 	            </div>
         )
