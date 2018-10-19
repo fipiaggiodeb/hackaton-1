@@ -112,7 +112,7 @@ export default class Game extends Component {
                     </div>
                     <div className="user-current-time">
                         <span className="text-3d">
-                            <Timer start={Date.now()} />
+                            <Timer start={this.state.start} />
                         </span>
                     </div>
                 </div>
