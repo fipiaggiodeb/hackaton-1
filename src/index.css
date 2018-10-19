@@ -18,3 +18,12 @@ code {
   border: 1px solid red;
   margin: 10px;
 }
+.show{
+  background: red;
+}
+.hidden{
+  background: peru;
+}
+.freeze{
+  background: green;
+}

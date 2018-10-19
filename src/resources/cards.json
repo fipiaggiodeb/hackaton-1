@@ -2,21 +2,29 @@
     {
         "id" : "01",
         "idGroup" : "01",
-        "name" : "Carta 1"
+        "name" : "Carta 1",
+        "freeze" : false,
+        "toggle": false
     },
     {
         "id" : "02",
         "idGroup" : "01",
-        "name" : "Carta 2"
+        "name" : "Carta 2",
+        "freeze" : false,
+        "toggle": false
     },
     {
         "id" : "03",
         "idGroup" : "02",
-        "name" : "Carta 3"
+        "name" : "Carta 3",
+        "freeze" : false,
+        "toggle": false
     },
     {
         "id" : "04",
         "idGroup" : "02",
-        "name" : "Carta 4"
+        "name" : "Carta 4",
+        "freeze" : false,
+        "toggle": false
     }
 ]
