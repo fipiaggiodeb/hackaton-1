@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-const test = styled.p`
-    color: red;
-`
+
 export default class Card extends Component {
-
-
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick(){
+        this.props.onCardClick(this.props.id);
+    }
     render(){
         return(
-            <div className="card">
-                <test> <p>Hola</p> </test>
+            <div onClick={ this.handleClick } className="card">
+                <p>Hola</p>
             </div>
         )
     }

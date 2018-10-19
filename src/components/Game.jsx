@@ -12,6 +12,7 @@ export default class Game extends Component {
         super(props);
         // Hace falta bindear this a los métodos que lo van a usar internamente
         this.finish = this.finish.bind(this);
+        this.click = this.click.bind(this);
         // Preset de las variables del state
         this.state = {
             start: new Date(),
@@ -20,8 +21,8 @@ export default class Game extends Component {
         }
     }
 
-    onCardClick(){
-        console.log('Click');
+    click(id){
+        console.log("CLICK", id);
     }
 
     /**
@@ -41,7 +42,7 @@ export default class Game extends Component {
      * Cuando se ejecuta el render
      */
     componentDidMount(){
-        console.log(Cards);
+        
     }
     
     render(){
@@ -49,11 +50,18 @@ export default class Game extends Component {
             <div>
                 <Link to="/">Volver</Link>
                 <p onClick={this.finish}> Terminar </p>
-                <h2>Jueguito</h2>
+                <h2 onClick={this.onCardClick}>Jueguito</h2>
                 <Timer start={Date.now()} />
                 <hr />
                 {
-                    Cards.map( card => <Card key={card.id}  onClick="onCardClick" /> )
+                    Cards.map( card => (
+                            <Card 
+                                key={card.id} 
+                                id={card.id} 
+                                idGroup={card.idGroup} 
+                                onCardClick={this.click} /> 
+                        )
+                    )
                 }
             </div>
         )

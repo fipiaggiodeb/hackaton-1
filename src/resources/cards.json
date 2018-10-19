@@ -7,6 +7,16 @@
     {
         "id" : "02",
         "idGroup" : "01",
-        "name" : "Carta 1"
+        "name" : "Carta 2"
+    },
+    {
+        "id" : "03",
+        "idGroup" : "02",
+        "name" : "Carta 3"
+    },
+    {
+        "id" : "04",
+        "idGroup" : "02",
+        "name" : "Carta 4"
     }
 ]
