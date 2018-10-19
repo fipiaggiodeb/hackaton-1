@@ -23,7 +23,7 @@ Build local:
 npm run-script build
 ```
 
-## Objetivos
+## Objetivos:
 
 El desarrollo de la aplicaición tiene como objetivo:
 
@@ -38,3 +38,9 @@ El desarrollo de la aplicaición tiene como objetivo:
 - Animar un SVG
 - Practicar CSSGrid
 - Practicar el manejo de estados y props en un componente en React
+
+## Pendientes:  
+
+Cosas que quedaron pendientes:
+
+- Utilizar bien CSSinJSX

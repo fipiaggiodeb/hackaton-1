@@ -10,11 +10,11 @@ class App extends Component {
   render(){
     return(
       <Router>
-        <div>
+        <main>
           <Route exact path="/" component={Welcome} />
           <Route path="/juego" component={Game} />
           <Route path="/finalizado" component={Finish} />
-        </div>
+        </main>
       </Router>
     )
   }

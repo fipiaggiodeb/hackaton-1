@@ -3,22 +3,22 @@
         "id" : "01",
         "idGroup" : "01",
         "name" : "Carta 1",
-        "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "toggle": false
     },
     {
         "id" : "02",
         "idGroup" : "01",
         "name" : "Carta 2",
-        "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "toggle": false
     },
     {
         "id" : "03",
         "idGroup" : "02",
         "name" : "Carta 3",
-        "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "toggle": false
     },
     {
         "id" : "04",
