@@ -21,6 +21,10 @@ export default class Game extends Component {
         }
     }
 
+    /**
+     * Cuando clickeas una card
+     * @param {number} id 
+     */
     click(id){
         console.log("CLICK", id);
     }
