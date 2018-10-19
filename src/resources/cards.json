@@ -4,84 +4,96 @@
         "idGroup" : "01",
         "name" : "Carta 1",
         "freeze" : false,
-        "toggle": false
+        "toggle": false,
+        "background": "bg-blue"
     },
     {
         "id" : "02",
         "idGroup" : "01",
         "name" : "Carta 2",
         "freeze" : false,
-        "toggle": false
+        "toggle": false,
+        "background": "bg-blue"
     },
     {
         "id" : "03",
         "idGroup" : "02",
         "name" : "Carta 3",
         "freeze" : false,
-        "toggle": false
+        "toggle": false,
+        "background": "bg-red"
     },
     {
         "id" : "04",
         "idGroup" : "02",
         "name" : "Carta 4",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-red"
     },
     {
         "id" : "05",
         "idGroup" : "03",
         "name" : "Carta 5",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-green"
     },
     {
         "id" : "06",
         "idGroup" : "03",
         "name" : "Carta 6",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-green"
     },
     {
         "id" : "07",
         "idGroup" : "04",
         "name" : "Carta 7",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-yellow"
     },
     {
         "id" : "08",
         "idGroup" : "04",
         "name" : "Carta 8",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-yellow"
     },
     {
         "id" : "09",
         "idGroup" : "05",
         "name" : "Carta 9",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-white"
     },
     {
         "id" : "10",
         "idGroup" : "05",
         "name" : "Carta 10",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-white"
     },
     {
         "id" : "11",
         "idGroup" : "06",
         "name" : "Carta 11",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-black"
     },
     {
         "id" : "12",
         "idGroup" : "06",
         "name" : "Carta 12",
         "toggle" : false,
-        "freeze" : false
+        "freeze" : false,
+        "background": "bg-black"
     },
     {
         "id" : "13",
