@@ -113,7 +113,6 @@ export default class Game extends Component {
                     <div className="title-box">
                         <h1>Memoria 2018</h1>
                         <Link to="/">Volver</Link>
-                        <p onClick={this.finish}> Terminar </p>
                     </div>
                     <div className="user-info">
                         <div className="user-name">
