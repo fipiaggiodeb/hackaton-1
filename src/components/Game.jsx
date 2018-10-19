@@ -21,7 +21,7 @@ export default class Game extends Component {
         // Todo: guardar finish score
         console.log( finish );
         // Redierct
-        this.props.history.push('/finalizado')
+        this.props.history.push('/finalizado');
     }
     render(){
         return(
