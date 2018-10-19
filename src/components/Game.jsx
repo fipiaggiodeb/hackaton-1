@@ -27,7 +27,7 @@ export default class Game extends Component {
      */
     click(id, toggle, idGroup, freeze){
         // Evito clickear sobre las que ya estan dadas vueltas
-        if(freeze){
+        if(freeze || toggle){
             return false;
         }
         // Todas las cards
@@ -88,10 +88,22 @@ export default class Game extends Component {
     }
 
     /**
+     * Desordena un array
+     * @param {Array} a 
+     */
+    shuffle(a) {
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    /**
      * Cuando se ejecuta el render
      */
     componentDidMount(){
-        this.setState({ cards: Cards })
+        this.setState({ cards: this.shuffle(Cards) })
     }
 
     render(){
