@@ -40,10 +40,10 @@ export default class Game extends Component {
             // Analizo si es distinta a la anterior
             if( this.state.selected !== idGroup ){
                 // Si es distinta la muestro por 500ms y lueg reseteo todo
-                setTimeout(function(){ 
+                setTimeout(function(){
                     cards.map( card => card.toggle = false );
                     this.setState({cards : cards });
-                }.bind(this), 500); 
+                }.bind(this), 500);
             }else{
                 // Si son iguales las marco como freezed
                 cards.map( card => card.idGroup === idGroup ? card.freeze = true : card );
@@ -51,8 +51,8 @@ export default class Game extends Component {
                     {cards : cards },
                     () => this.isFinish() && this.finish()
                 );
-                
-            }           
+
+            }
         }else if(!toggle){
             // Sino verifico que la tarjeta no esté en toggle
             cards.map( card => !card.toggle && card.id === id ? card.toggle = true : card );
@@ -130,13 +130,14 @@ export default class Game extends Component {
                 <div className="grid-container">
                     {
                         Cards.map( card => (
-                            <Card 
-                                key={card.id} 
+                            <Card
+                                key={card.id}
                                 id={card.id}
                                 toggle={card.toggle}
-                                freeze={card.freeze} 
-                                idGroup={card.idGroup} 
-                                onCardClick={this.click} /> 
+                                freeze={card.freeze}
+                                idGroup={card.idGroup}
+                                cardBg={card.background} 
+                                onCardClick={this.click} />
                             )
                         )
                     }
