@@ -13,7 +13,6 @@ code {
     monospace;
 }
 
-/* flip cards & board*/
 .game-container {
     max-width: 50%;
     min-width: 650px;
@@ -62,9 +61,14 @@ code {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.flipped-flip-card,
+.flipped-flip-card-inner{
+    transform: rotateY(180deg);
 }
+
+/* .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
 
 .flip-card-front, .flip-card-back {
     /**/background: gray;
@@ -84,6 +88,9 @@ code {
   height: 100%;
 }
 
+.flipped {
+  transform: rotateY(180deg);
+}
 
 /*gradient bg*/
 

@@ -25,7 +25,7 @@ export default class Timer extends Component {
         let seconds = (elapsed / 10).toFixed(1);
         return(
             <div>
-                <p> Tiempo {seconds}</p>
+                <p>{seconds}</p>
             </div>
         )
     }

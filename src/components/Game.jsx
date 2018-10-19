@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import Cards from "../resources/cards.json";
 
+// Components
 import Timer from './Timer';
+import Card from './Card';
 
 export default class Game extends Component {
     constructor(props){
@@ -9,11 +12,26 @@ export default class Game extends Component {
         super(props);
         // Hace falta bindear this a los métodos que lo van a usar internamente
         this.finish = this.finish.bind(this);
+        this.click = this.click.bind(this);
         // Preset de las variables del state
         this.state = {
-            start: new Date()
+            start: new Date(),
+            step: 0,
+            showCards : false
         }
     }
+
+    /**
+     * Cuando clickeas una card
+     * @param {number} id
+     */
+    click(id){
+        console.log("CLICK", id);
+    }
+
+    /**
+     * Cuando el jugador gana y se cambia de vista
+     */
     finish(){
         // Calculo el puntaje
         let elapsed = Math.round(  ( this.state.start - new Date() )  / 100 );
@@ -23,21 +41,24 @@ export default class Game extends Component {
         // Redierct
         this.props.history.push('/finalizado');
     }
+
+    /**
+     * Cuando se ejecuta el render
+     */
+    componentDidMount(){
+
+    }
+
     render(){
         let elapsed = Math.round(this.state.elapsed / 100);
         let seconds = (elapsed / 10).toFixed(1);
-        return(
-            <div>
-                <p> Tiempo {seconds}</p>
-            </div>
-        )
-    }
-    render(){
         return(
             <div className="game-container">
                 <div className="header">
                     <div className="title-box">
                         <h1>Memoria 2018</h1>
+                        <Link to="/">Volver</Link>
+                        <p onClick={this.finish}> Terminar </p>
                     </div>
                     <div className="user-info">
                         <div className="user-name">
@@ -47,210 +68,24 @@ export default class Game extends Component {
                         </div>
                     </div>
                     <div className="user-current-time">
-                        <span class="text-3d">50.1</span>
+                        <span class="text-3d">
+                            <Timer start={Date.now()} />
+                        </span>
                     </div>
                 </div>
                 <div className="grid-container">
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src="" />
-                                </div>
-                                <div className="flip-card-back">
-                                    <img src="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {
+                        Cards.map( card => (
+                            <Card
+                            key={card.id}
+                            id={card.id}
+                            idGroup={card.idGroup}
+                            onCardClick={this.click} />
+                            )
+                        )
+                    }
                 </div>
             </div>
-            // <div>
-            //     <Link to="/">Volver</Link>
-            //     <p onClick={this.finish}> Terminar </p>
-            //     <h2>Jueguito</h2>
-            //     <Timer start={Date.now()} />
-            // </div>
         )
     }
 }
