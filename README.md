@@ -1,5 +1,8 @@
 # 1er Hackaton Dedmedia
 
+Versión funcional:
+https://fipiaggiodeb.github.io/hackaton-1/
+
 - Alejandro Brunella
 - Paula Taglia
 - Francisco Piaggio
